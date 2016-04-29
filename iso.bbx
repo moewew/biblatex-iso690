@@ -180,6 +180,8 @@
     {\mkbibbrackets{#1}}
 }
 
+\DeclareFieldFormat{type}{\mainlstring{#1}}
+
 \DeclareFieldFormat{sbrackets}{[#1]}
 %\DeclareFieldFormat{rbrackets}{\printtext{$\langle$}#1\printtext{$\rangle$}}
 \DeclareFieldFormat{rbrackets}{$\langle$#1$\rangle$}
@@ -528,6 +530,10 @@
   {\printfield{pagetotal}}
   {}%
 \newunit\newblock%
+\printfield{type}
+\newunit\newblock%
+\printlist{institution}
+\newunit\newblock%
 \printfield{note}%
 \newunit\newblock%
 \setunit{\bibpagerefpunct}\newblock%
@@ -728,7 +734,7 @@
 \DeclareBibliographyAlias{reference}{collection}
 \DeclareBibliographyAlias{inreference}{incollection}
 \DeclareBibliographyAlias{report}{book}
-% \DeclareBibliographyAlias{thesis}{book}
+\DeclareBibliographyAlias{thesis}{book}
 \DeclareBibliographyAlias{unpublished}{book}
 \DeclareBibliographyAlias{patent}{book}
 \endinput
