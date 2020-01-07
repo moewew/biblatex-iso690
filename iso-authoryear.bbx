@@ -12,11 +12,7 @@
 % we should state there is no date by printing
 % a localisation string, e.g. [n.d.].
 \newbibmacro*{date+extradate}{%
-  \begingroup
-    \iffieldundef{year}
-      {\bibstring[\mkbibbrackets]{nodate}}
-      {\printdateextra}%
-  \endgroup
+  \printlabeldateextra
 }
 
 % Remove second appearance of year in a reference
